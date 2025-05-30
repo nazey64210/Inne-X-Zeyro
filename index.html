@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <title>Mon Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: linear-gradient(to bottom, #3ED0FF, #E9F17C); /* 🎨 Dégradé doux */
+      color: #333;
+    }
+
+    header {
+      background-color: #FFFFFF;
+      color: black;
+      padding: 15px 7px;
+      text-align: center;
+    }
+
+    header img {
+      max-height: 400px;
+      margin-bottom: -100px;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: calc(25% - 10px);
+      aspect-ratio: 1/1;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .contact {
+      margin-top: 40px;
+    }
+
+    .contact p {
+      margin: 8px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: white;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery img {
+        width: calc(25% - 10px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo de mon site">
+    <h1>Inne X Zeyro</h1>
+    <p>On imprime ton style</p>
+  </header>
+
+  <div class="content">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Photo 1">
+      <img src="photo2.jpg" alt="Photo 2">
+      <img src="photo3.jpg" alt="Photo 3">
+      <img src="photo4.jpg" alt="Photo 4">
+      <img src="photo5.jpg" alt="Photo 5">
+      <img src="photo6.jpg" alt="Photo 6">
+      <img src="photo7.jpg" alt="Photo 7">
+      <img src="photo8.jpg" alt="Photo 8">
+    </div>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>📧 Email : <a href="mailto:votre@email.com">votre@email.com</a></p>
+      <p>📱 Téléphone : 06 12 34 56 78</p>
+      <p>📍 Adresse : Ville, Pays</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 - Mon Site
+  </footer>
+
+</body>
+</html>
