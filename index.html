@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,10 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Site</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0; padding: 0;
-      background: linear-gradient(to bottom, #3ED0FF, #E9F17C); /* 🎨 Dégradé doux */
+      background: linear-gradient(to bottom, #3ED0FF, #E9F17C);
       color: #333;
     }
 
@@ -21,6 +26,8 @@
 
     header img {
       max-height: 400px;
+      width: 100%;
+      height: auto;
       margin-bottom: -100px;
     }
 
@@ -45,7 +52,7 @@
 
     .gallery img {
       width: calc(25% - 10px);
-      aspect-ratio: 1/1;
+      aspect-ratio: 1 / 1;
       border-radius: 6px;
       object-fit: cover;
     }
@@ -68,13 +75,21 @@
 
     @media (max-width: 768px) {
       .gallery img {
-        width: calc(25% - 10px);
+        width: calc(50% - 10px);
       }
     }
 
     @media (max-width: 480px) {
       .gallery img {
         width: 100%;
+      }
+
+      header img {
+        margin-bottom: -50px;
+      }
+
+      .content {
+        padding: 10px;
       }
     }
   </style>
