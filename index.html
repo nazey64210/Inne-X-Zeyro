@@ -53,6 +53,43 @@
       gap: 20px;
       flex-wrap: wrap;
     }
+    .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.image-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Forcer les 2 grandes à occuper plus d'espace */
+.image-grid img.grande {
+  grid-column: span 3;
+  width: 100%;
+  height: auto;
+}
+
+/* Organisation spécifique */
+.image-grid .img1, 
+.image-grid .img2 {
+  grid-column: span 3;
+  display: flex;
+  gap: 10px;
+}
+
+.image-grid .img1 img,
+.image-grid .img2 img {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+}
+
 
     .ligne-haut img {
       width: 45%;
@@ -129,16 +166,16 @@
 
   <div class="content">
     <!-- Galerie -->
-    <div class="gallery">
-      <div class="ligne-haut">
-        <img src="photo6.jpg" alt="Grande image 1">
-        <img src="photo2.jpg" alt="Grande image 2">
-      </div>
-      <div class="ligne-bas">
-        <img src="photo3.jpg" alt="Petite image 1">
-        <img src="photo4.jpg" alt="Petite image 2">
-        <img src="photo5.jpg" alt="Petite image 3">
-      </div>
+    <div class="image-grid">
+  <div class="img1">
+    <img src="photo1.jpg" alt="Image 1">
+    <img src="photo2.jpg" alt="Image 2">
+  </div>
+  <img src="photo3.jpg" alt="Image 3">
+  <img src="photo4.jpg" alt="Image 4">
+  <img src="photo5.jpg" alt="Image 5">
+</div>
+
     </div>
 
     <!-- Description -->
