@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Site</title>
+  <title>Inne X Zeyro</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,142 +11,139 @@
 
     body {
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       background: linear-gradient(to bottom, #3ED0FF, #E9F17C);
       color: #333;
     }
 
     header {
-      background-color: #FFFFFF;
-      color: black;
-      padding: 15px 7px;
+      background-color: #fff;
       text-align: center;
+      padding: 20px;
     }
 
     header img {
-      max-height: 400px;
-      width: 100%;
-      height: auto;
-      margin-bottom: -100px;
+      height: 120px;
+      width: auto;
     }
 
     .content {
       max-width: 1000px;
-      margin: auto;
+      margin: 40px auto;
       padding: 20px;
-    }
-
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
+      text-align: center;
     }
 
     .gallery {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
     }
 
-    .gallery img {
-      width: calc(25% - 10px);
-      aspect-ratio: 1 / 1;
-      border-radius: 6px;
-      object-fit: cover;
+    .ligne-haut, .ligne-bas {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .ligne-haut img {
+      width: 45%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .ligne-bas img {
+      width: 28%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .description {
+      margin: 30px auto;
+      max-width: 800px;
+      font-size: 1.2em;
     }
 
     .contact {
       margin-top: 40px;
+      font-size: 1em;
     }
 
     .contact p {
-      margin: 8px 0;
-    }
-
-    .lignehaut {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .lignebas {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .ligne-haut img {
-      width: 48%;
-      height: auto;
-    }
-    
-    .ligne-bas img {
-      width: 30%;
-      height: auto;
+      margin: 10px 0;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
+      position: relative;
       background-color: #111;
       color: white;
-      margin-top: 50px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    footer img {
+      height: 50px;
+      width: auto;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    footer a {
+      color: #3ED0FF;
+      text-decoration: none;
     }
 
     @media (max-width: 768px) {
-      .gallery img {
-        width: calc(50% - 10px);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .gallery img {
-        width: 100%;
-      }
-
-      header img {
-        margin-bottom: -50px;
-      }
-
-      .content {
-        padding: 10px;
+      .ligne-haut img,
+      .ligne-bas img {
+        width: 80%;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Logo en haut -->
   <header>
-    <img src="logo.png" alt="Logo de mon site">
-    <h1>Inne X Zeyro</h1>
-    <p>On imprime ton style</p>
+    <img src="logo.png" alt="Logo du site">
   </header>
 
   <div class="content">
-    <h2>Galerie</h2>
+    <!-- Galerie -->
     <div class="gallery">
-      <div class="lignehaut" 
-      <img src="photo1.jpg" alt="Photo 1">
-      <img src="photo2.jpg" alt="Photo 2">
-      </div><br>
-      <div class="lignebas">
-      <img src="photo3.jpg" alt="Photo 3">
-      <img src="photo4.jpg" alt="Photo 4">
-      <img src="photo5.jpg" alt="Photo 5">
+      <div class="ligne-haut">
+        <img src="photo1.jpg" alt="Grande image 1">
+        <img src="photo2.jpg" alt="Grande image 2">
+      </div>
+      <div class="ligne-bas">
+        <img src="photo3.jpg" alt="Petite image 1">
+        <img src="photo4.jpg" alt="Petite image 2">
+        <img src="photo5.jpg" alt="Petite image 3">
       </div>
     </div>
 
+    <!-- Description -->
+    <div class="description">
+      <p>Nous donnons vie à votre style à travers des impressions uniques et créatives. Découvrez notre univers graphique !</p>
+    </div>
+
+    <!-- Contact / Réseaux -->
     <div class="contact">
-      <h2>Contact</h2>
-      <p>📧 Email : <a href="mailto:votre@email.com">votre@email.com</a></p>
-      <p>📱 Téléphone : 06 12 34 56 78</p>
-      <p>📍 Adresse : Ville, Pays</p>
+      <p>📸 Instagram : <a href="https://instagram.com/toncompte" target="_blank">@toncompte</a></p>
+      <p>📱 WhatsApp : <a href="https://wa.me/33123456789" target="_blank">+33 1 23 45 67 89</a></p>
+      <p>📧 Email : <a href="mailto:votremail@email.com">votremail@email.com</a></p>
     </div>
   </div>
 
+  <!-- Pied de page avec logo et lien en bas à droite -->
   <footer>
-    &copy; 2025 - Mon Site
+    <p>© 2025 Inne X Zeyro — Tous droits réservés. Visitez <a href="https://www.zeyro.eus" target="_blank">www.zeyro.eus</a></p>
+    <img src="logo.png" alt="Logo bas de page">
   </footer>
 
 </body>
