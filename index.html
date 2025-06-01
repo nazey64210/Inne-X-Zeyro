@@ -27,8 +27,15 @@
       width: 30vw;
       height: auto;
       display: block;
-      margin: 0 auto 10px;
+      margin: 20px auto 10px; /* espace au-dessus et en-dessous réduit */
       object-fit: contain;
+    }
+
+    h1 {
+      max-width: 1000px;
+      margin: 10px auto 30px; /* rapproche du logo */
+      font-size: 2em;
+      text-align: center;
     }
 
     .image-grid {
@@ -36,7 +43,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       max-width: 900px;
-      margin: 40px auto;
+      margin: 0 auto 40px;
     }
 
     .image-grid img {
@@ -55,13 +62,6 @@
     .img-large img {
       width: 50%;
       aspect-ratio: 1 / 1;
-    }
-
-    h1 {
-      max-width: 1000px;
-      margin: 30px auto;
-      font-size: 2em;
-      text-align: center;
     }
 
     .description {
@@ -86,6 +86,7 @@
       color: white;
       padding: 20px;
       text-align: left;
+      font-family: 'Gyst', sans-serif;
     }
 
     footer img {
@@ -111,6 +112,10 @@
 
       .image-grid {
         grid-template-columns: 1fr;
+      }
+
+      .top-banner img {
+        width: 50vw;
       }
     }
   </style>
