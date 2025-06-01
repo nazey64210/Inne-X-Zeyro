@@ -24,22 +24,21 @@
     }
 
     .top-banner {
-      text-align: center;
+      display: flex;
+      justify-content: center;
       margin-top: 10px;
-      margin-bottom: 0px; /* réduit l'espace entre le logo et le h1 */
+      margin-bottom: -10px; /* colle le h1 au logo */
     }
 
     .top-banner img {
       width: 35vw;
       height: auto;
-      display: block;
-      margin: auto;
       object-fit: contain;
     }
 
     h1 {
-      margin-top: -40px;
-      margin: auto; /* très proche du logo */
+      margin-top: 0;
+      margin-bottom: 5px; /* colle les images au h1 */
       font-size: 2em;
       text-align: center;
     }
@@ -49,7 +48,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       max-width: 900px;
-      margin: 0 auto 40px;
+      margin: 5px auto 40px;
     }
 
     .image-grid img {
@@ -128,15 +127,15 @@
 </head>
 <body>
 
-  <!-- Logo en haut -->
+  <!-- Logo en haut centré -->
   <div class="top-banner">
     <img src="logo.png" alt="Logo du site">
   </div>
 
-  <!-- Titre -->
+  <!-- Titre collé au logo -->
   <h1>INNE & ZEYRO</h1>
 
-  <!-- Galerie d’images -->
+  <!-- Galerie d’images juste sous le titre -->
   <div class="image-grid">
     <div class="img-large">
       <img src="photo6.jpg" alt="Grande Image 1">
@@ -154,8 +153,8 @@
 
   <!-- Contact -->
   <div class="contact">
-    <p>📸 Instagram : <a href="https://instagram.com/inne_laurent" target="_blank">@inne_laurent </a>  &  <a href="https://instagram.com/__zeyro__" target="_blank"> @__zeyro__</a></p>
-    <p>📱 WhatsApp : Inne : <a href="https://wa.me/33666792070" target="_blank"> +33 6 66 79 20 70 </a>  & Zeyro : <a href="https://wa.me/33642981288" target="_blank"> +33 6 42 98 12 88</a></p>
+    <p>📸 Instagram : <a href="https://instagram.com/inne_laurent" target="_blank">@inne_laurent </a> & <a href="https://instagram.com/__zeyro__" target="_blank">@__zeyro__</a></p>
+    <p>📱 WhatsApp : Inne : <a href="https://wa.me/33666792070" target="_blank">+33 6 66 79 20 70</a> & Zeyro : <a href="https://wa.me/33642981288" target="_blank">+33 6 42 98 12 88</a></p>
     <p>📧 Email : <a href="mailto:votremail@email.com">votremail@email.com</a></p>
   </div>
 
