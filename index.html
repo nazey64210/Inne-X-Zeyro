@@ -54,6 +54,7 @@
       margin: 20px auto 40px;
     }
 
+    /* Ligne des 2 grandes images */
     .row-large {
       display: flex;
       gap: 10px;
@@ -67,13 +68,14 @@
       border-radius: 8px;
     }
 
+    /* Ligne des 3 petites images */
     .row-small {
       display: flex;
       gap: 10px;
     }
 
     .row-small img {
-      width: 33.33%;
+      width: 33.3333%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 8px;
@@ -118,22 +120,8 @@
       text-decoration: none;
     }
 
-    /* Responsive: garde la même structure */
+    /* Responsive - garder la même disposition sur mobile */
     @media (max-width: 600px) {
-      .row-large,
-      .row-small {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .row-large img {
-        width: 50%;
-      }
-
-      .row-small img {
-        width: 33.33%;
-      }
-
       .top-banner img {
         width: 35vw;
       }
@@ -150,6 +138,15 @@
       .contact {
         font-size: 2em;
       }
+      
+      /* garder la disposition identique */
+      .row-large img {
+        width: 50%;
+      }
+
+      .row-small img {
+        width: 33.3333%;
+      }
     }
   </style>
 </head>
@@ -162,7 +159,6 @@
   <h1>INNE & ZEYRO</h1>
   <p class="punchline">Punchline bien carré le saang de la veine<br>et mm un retour à la ligne stv</p>
 
-  <!-- Galerie d'images -->
   <div class="gallery">
     <div class="row-large">
       <img src="photo6.jpg" alt="Grande Image 1">
