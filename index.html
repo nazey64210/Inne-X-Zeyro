@@ -27,20 +27,27 @@
       display: flex;
       justify-content: center;
       margin-top: 10px;
-      margin-bottom: 10px; /* Réduit encore plus pour rapprocher le logo du titre */
+      margin-bottom: 5px; /* Reduced to bring logo closer to title */
     }
 
     .top-banner img {
-      width: 20vw; /* Réduit la taille du logo */
+      width: 20vw; /* Maintained reduced logo size */
       height: auto;
-      
+      object-fit: contain;
     }
 
     h1 {
-      margin-top: 0;
-      margin-bottom: 10px; /* Maintient le titre collé aux images */
-      font-size: 10em;
+      margin: 0;
+      font-size: 6em; /* Reduced from 10em to prevent overflow */
       text-align: center;
+    }
+
+    .punchline {
+      margin: 5px auto 10px;
+      font-size: 1.5em;
+      text-align: center;
+      max-width: 900px;
+      font-weight: bold;
     }
 
     .image-grid {
@@ -82,7 +89,7 @@
     }
 
     .contact p {
-      margin: 10px 0;
+      margin: 0px 0;
     }
 
     footer {
@@ -120,7 +127,15 @@
       }
 
       .top-banner img {
-        width: 35vw; /* Ajuste la taille du logo pour mobile */
+        width: 35vw; /* Adjusted logo size for mobile */
+      }
+
+      h1 {
+        font-size: 3em; /* Further reduced for mobile */
+      }
+
+      .punchline {
+        font-size: 1.2em; /* Adjusted for mobile readability */
       }
     }
   </style>
@@ -132,10 +147,10 @@
     <img src="IMG_0259.PNG" alt="Logo du site">
   </div>
   
-  <!-- Titre collé au logo -->
+  <!-- Titre et punchline -->
   <h1>INNE & ZEYRO</h1>
-  <p><strong>punchline bien carré le saang de la veine <br>
-  et mm un retour a la ligne stv </strong></p>
+  <p class="punchline">Punchline bien carré le saang de la veine<br>et mm un retour à la ligne stv</p>
+
   <!-- Galerie d’images juste sous le titre -->
   <div class="image-grid">
     <div class="img-large">
@@ -150,17 +165,13 @@
   <!-- Description -->
   <div class="description">
     <p>Un lancement ? Un mariage ? Ou juste l’envie de marquer le coup ?<br><br>
-
 INNE X ZEYRO, c’est pas de la série.<br>
 C’est pour celles et ceux qui veulent du fait pour. Pas du tout-fait.<br><br>
-
 T-shirts, casquettes, éditions courtes.<br>
 Petites quantités, grandes gueules.<br><br>
-
 Du style comme t’en vois pas partout.<br>
 À ton image.<br>
 À notre sauce.<br>
-
 Lasai. On imprime ton feu.<br></p>
   </div>
 
