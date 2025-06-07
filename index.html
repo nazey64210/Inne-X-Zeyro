@@ -121,19 +121,23 @@
     }
 
     /* Adaptation tablette */
-    @media (max-width: 900px) {
+    @media (max-width: 600px) {
       .img-large {
-        flex-direction: column;
+        flex-direction: row; /* ✅ Ajout pour forcer la ligne même sur mobile */
+        flex-wrap: wrap;
       }
-
+    
       .img-large img {
-        width: 100%;
+        width: 50%; /* ✅ Garde les deux images côte à côte */
       }
+    
+      /* ❌ Ne pas modifier .image-grid ici du tout */
+
 
       .image-grid {
         grid-template-columns: 1fr;
       }
-
+    }
       h1 {
         font-size: 3em;
       }
