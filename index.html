@@ -27,18 +27,18 @@
       display: flex;
       justify-content: center;
       margin-top: 10px;
-      margin-bottom: 5px; /* Reduced to bring logo closer to title */
+      margin-bottom: 5px;
     }
 
     .top-banner img {
-      width: 20vw; /* Maintained reduced logo size */
+      width: 20vw;
       height: auto;
       object-fit: contain;
     }
 
     h1 {
       margin: 0;
-      font-size: 3em; /* Reduced from 10em to prevent overflow */
+      font-size: 5em; /* augmenté depuis 3em */
       text-align: center;
     }
 
@@ -46,7 +46,6 @@
       margin: 5px auto 10px;
       font-size: 1.2em;
       text-align: center;
-      
       font-weight: bold;
     }
 
@@ -79,19 +78,19 @@
     .description {
       max-width: 800px;
       margin: 30px auto;
-      font-size: 2em;
+      font-size: 1.2em; /* égal à la punchline */
       text-align: center;
     }
 
     .contact {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 1.2em;
-
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 1.2em; /* égal à la description */
+      text-align: left; /* aligné à gauche */
     }
 
     .contact p {
-      margin: 0px 0;
+      margin: 0 0 10px 0;
     }
 
     footer {
@@ -129,16 +128,20 @@
       }
 
       .top-banner img {
-        width: 35vw; /* Adjusted logo size for mobile */
+        width: 35vw;
       }
 
       h1 {
-        font-size: 8em; /* Further reduced for mobile */
+        font-size: 3em; /* réduit pour mobile */
       }
 
-      .punchline {
-        font-size: 2em; /* Adjusted for mobile readability */
+      .punchline, .description, .contact {
+        font-size: 1.2em;
         text-align: center;
+      }
+
+      .contact {
+        text-align: center; /* réaligne au centre sur mobile */
       }
     }
   </style>
