@@ -34,48 +34,49 @@
       width: 20vw;
       height: auto;
       object-fit: contain;
-      max-width: 100%;
     }
 
     h1 {
       margin: 0;
-      font-size: 3.5em;
+      font-size: 3em;
       text-align: center;
     }
 
     .punchline {
       margin: 5px auto 10px;
-      font-size: 1.3em;
+      font-size: 1.5em;
       text-align: center;
       font-weight: bold;
     }
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+    .gallery {
       max-width: 900px;
-      margin: 5px auto 40px;
-      padding: 0 10px;
+      margin: 20px auto 40px;
     }
 
-    .image-grid img {
-      width: 100%;
+    .row-large {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .row-large img {
+      width: 50%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 8px;
     }
 
-    .img-large {
-      grid-column: span 3;
+    .row-small {
       display: flex;
       gap: 10px;
-      flex-wrap: wrap;
     }
 
-    .img-large img {
-      width: 50%;
+    .row-small img {
+      width: 33.33%;
       aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
     }
 
     .description {
@@ -83,7 +84,6 @@
       margin: 30px auto;
       font-size: 2em;
       text-align: center;
-      padding: 0 15px;
     }
 
     .contact {
@@ -91,7 +91,6 @@
       margin: 0 auto 40px;
       font-size: 2em;
       text-align: left;
-      padding: 0 15px;
     }
 
     .contact p {
@@ -102,7 +101,7 @@
       position: relative;
       background-color: #111;
       color: white;
-      padding: 20px 15px;
+      padding: 20px;
       text-align: left;
       font-family: 'Gyst', sans-serif;
     }
@@ -117,27 +116,28 @@
     footer a {
       color: #3ED0FF;
       text-decoration: none;
-      word-break: break-word;
     }
 
-    /* Adaptation tablette */
+    /* Responsive: garde la même structure */
     @media (max-width: 600px) {
-      .img-large {
-        flex-direction: row; /* ✅ Ajout pour forcer la ligne même sur mobile */
+      .row-large,
+      .row-small {
+        flex-direction: row;
         flex-wrap: wrap;
       }
-    
-      .img-large img {
-        width: 50%; /* ✅ Garde les deux images côte à côte */
-      }
-    
-      /* ❌ Ne pas modifier .image-grid ici du tout */
 
-
-      .image-grid {
-        grid-template-columns: 1fr;
+      .row-large img {
+        width: 50%;
       }
-    }
+
+      .row-small img {
+        width: 33.33%;
+      }
+
+      .top-banner img {
+        width: 35vw;
+      }
+
       h1 {
         font-size: 3em;
       }
@@ -150,36 +150,6 @@
       .contact {
         font-size: 2em;
       }
-
-      footer img {
-        position: static;
-        display: block;
-        margin: 20px auto 0;
-      }
-    }
-
-    /* Adaptation smartphone */
-    @media (max-width: 600px) {
-      .top-banner img {
-        width: 35vw;
-      }
-
-      h1 {
-        font-size: 2.5em;
-      }
-
-      .punchline {
-        font-size: 1.5em;
-      }
-
-      .description,
-      .contact {
-        font-size: 1.5em;
-      }
-
-      .img-large img {
-        width: 100%;
-      }
     }
   </style>
 </head>
@@ -188,18 +158,21 @@
   <div class="top-banner">
     <img src="IMG_0259.PNG" alt="Logo du site">
   </div>
-  
+
   <h1>INNE & ZEYRO</h1>
   <p class="punchline">Punchline bien carré le saang de la veine<br>et mm un retour à la ligne stv</p>
 
-  <div class="image-grid">
-    <div class="img-large">
+  <!-- Galerie d'images -->
+  <div class="gallery">
+    <div class="row-large">
       <img src="photo6.jpg" alt="Grande Image 1">
       <img src="photo1.jpg" alt="Grande Image 2">
     </div>
-    <img src="photo2.jpg" alt="Petite image 1">
-    <img src="photo3.jpg" alt="Petite image 2">
-    <img src="photo4.jpg" alt="Petite image 3">
+    <div class="row-small">
+      <img src="photo2.jpg" alt="Petite image 1">
+      <img src="photo3.jpg" alt="Petite image 2">
+      <img src="photo4.jpg" alt="Petite image 3">
+    </div>
   </div>
 
   <div class="description">
@@ -215,7 +188,7 @@
   </div>
 
   <div class="contact">
-    <p>📸 Instagram : <a href="https://instagram.com/inne_laurent" target="_blank">@inne_laurent</a> & <a href="https://instagram.com/__zeyro__" target="_blank">@__zeyro__</a></p>
+    <p>📸 Instagram : <a href="https://instagram.com/inne_laurent" target="_blank">@inne_laurent </a> & <a href="https://instagram.com/__zeyro__" target="_blank">@__zeyro__</a></p>
     <p>📱 WhatsApp : Inne : <a href="https://wa.me/33666792070" target="_blank">+33 6 66 79 20 70</a> & Zeyro : <a href="https://wa.me/33642981288" target="_blank">+33 6 42 98 12 88</a></p>
     <p>📧 Email : <a href="mailto:votremail@email.com">votremail@email.com</a></p>
   </div>
